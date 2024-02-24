@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        margin: 5% auto;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <h1>Direccion de arte</h1>
+
+        <picture>
+          <source
+            media="(max-width: 799px)"
+            srcset="./img/bosque-400w-recortada.jpg"
+          />
+          <source media="(min-width: 800px)" srcset="./img/bosque-800w.jpg" />
+
+          <img src="./img/bosque-original.jpg" alt="bosque" />
+        </picture>
+
+        <picture>
+          <source
+            media="(max-width: 799px)"
+            srcset="./img/mar-400w-recortada.jpg"
+          />
+          <source media="(min-width: 800px)" srcset="./img/mar-800w.jpg" />
+
+          <img src="./img/mar-original.jpg" alt="mar" />
+        </picture>
+
+        <h1>Cambios de resolucion</h1>
+
+        <img
+          srcset="
+            ./img/mar-320w.jpg 320w,
+            ./img/mar-480w.jpg 480w,
+            ./img/mar-640w.jpg 640w,
+            ./img/mar-800w.jpg 800w
+          "
+          sizes="(max-width: 600px) 480px, 
+                800px"
+          src="./img/mar-original.jpg"
+          alt="mar"
+        />
+      </section>
+    </main>
+  </body>
+</html>
